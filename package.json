@@ -1,0 +1,9 @@
+{
+  "name": "james-fulford-resume",
+  "version": "11",
+  "description": "Professional Resume of James Fulford",
+  "main": "resume/latest.pdf",
+  "author": "James Fulford <james.fulford@outlook.com>",
+  "license": "MIT",
+  "private": false
+}
