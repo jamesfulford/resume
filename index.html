@@ -29,6 +29,14 @@
 			min-width: 100%;
 			z-index: 1;
 		}
+		.video-credit-container {
+			text-align: center;
+			margin-top: 20px;
+			width: 100%;
+			position: absolute;
+			font-style: italic;
+			color: var(--text);
+		}
 		.page {
 			position: fixed;
 			top: 0;
@@ -136,6 +144,12 @@
 <video autoplay muted loop id="bg-video" src="video.mov"></video>
 <!-- overlay + separation of content and bg -->
 <div class="page">
+	<div class="video-credit-container">
+		<span>
+			Video is composed of outputs from my self-driving car projects
+		</span>
+	</div>
+
 	<!-- actual content -->
 	<div class="content">
 		<h1>James Fulford</h1>
