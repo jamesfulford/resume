@@ -52,13 +52,14 @@
 			height: 100%;
 			z-index: 2;
 
-			background-color: rgba(0,0,0,.85);
+			background-color: rgba(0,0,0,0.6);
 		}
 		/* content */
 		.content {
 			width: 100%;
 			text-align: center;
-			padding-top: 15%;
+			padding-top: 2%;
+			padding-bottom: 2%;
 
 			opacity: 0;
 			animation: 1s fade-in ease-in forwards;
@@ -95,9 +96,13 @@
 			font-style: italic;
 			color: var(--burnt);
 		}
-		/* buttons */
-		.content .links {
-			padding-top: 11%;
+		.links {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		.links > a {
+			width: 180px;
 		}
 		.content .links span img {
 			height: 18px;
@@ -107,7 +112,7 @@
 		.button {
 			box-sizing: border-box;
 			border: 0px solid transparent;
-			border-bottom: 2px solid var(--gold);
+			border-bottom: 1px solid var(--gold);
 			padding: 10px 30px;
 			margin: 3%;
 			color: var(--text);
@@ -118,7 +123,7 @@
 			margin-right: 10px;
 		}
 		.button.resume {
-			border: 2px solid var(--gold);
+			border: 1px solid var(--gold);
 		}
 		.button:hover {
 			opacity: .8;
@@ -143,39 +148,49 @@
 
 		/* media */
 		@media screen and (max-width: 1140px) {
-			.button {
-				margin: 1%;
-			}
-		}
-		@media screen and (max-width: 920px) {
-			.button {
-				display: block;
-				margin: 1% auto;
-				width: 30%;
-			}
-			.content .links {
-				padding-top: 4%;
+			.links {
+				flex-direction: column;
+				align-items: center;
 			}
 		}
 	</style>
 </head>
 <body>
 <!-- video in bg -->
-<video autoplay muted loop id="bg-video" src="video.mov"></video>
+<img id="bg-video" src="TreesPathDarkScaled.png" width="100%" />
+<!-- <video autoplay muted loop id="bg-video" src="video.mov"></video> -->
 <!-- overlay + separation of content and bg -->
 <div class="page">
-	<div class="video-credit-container">
+	<!-- <div class="video-credit-container">
 		<span>Video is from my self-driving car projects</span>
-	</div>
+	</div> -->
 
 	<!-- actual content -->
 	<div class="content">
-		<h1>James Fulford</h1>
-		<hr />
-		<h2>Harvard. Tech Lead. American.</h2>
+		<div class="links" style="padding-bottom: 8%">
+			<a href="https://reachinghigher.live" class="button" target="_blank">
+				Ministry
+			</a>
 
-		<!-- all the buttons -->
-		<div class="links">
+			<a href="https://medium.com/@reaching.higher/about" class="button" target="_blank">
+				About
+			</a>
+
+			<a href="https://www.youtube.com/@reachinghigherlive" class="button" target="_blank">
+				<i class="fab fa-youtube"></i>
+				YouTube
+			</a>
+
+			<a href="mailto:james.fulford@outlook.com" class="button resume" target="_blank">
+				Contact
+			</a>
+		</div>
+
+		<h2>Messianic Ministry Leader at <a href="https://reachinghigher.live" target="_blank" style="color: var(--burnt)">reachinghigher.live</a></h2>
+		<h1>James Fulford</h1>
+		<h2>Harvard. CEO at <a href="https://anounceofsilver.com" target="_blank" style="color: var(--burnt)">An Ounce of Silver Technologies</a></h2>
+
+		<div class="links" style="padding-top: 8%">
 			<a href="https://github.com/jamesfulford" class="button" target="_blank">
 				<i class="fab fa-github"></i>
 				GitHub
@@ -192,10 +207,10 @@
 			</a>
 
 			<a href="resume/latest.pdf" class="button resume" target="_blank">
-				Résumé
+				Tech Résumé
 			</a>
 		</div>
-		<p class="credit">© 2021 James Fulford. Website created by <a href="https://jessicafulford.com">Jessica Fulford</a>
+		<p class="credit">© 2018-2023 James Fulford. Website created by <a href="https://jessicafulford.com">Jessica Fulford</a>
 		</p>
 	</div>
 </div>
